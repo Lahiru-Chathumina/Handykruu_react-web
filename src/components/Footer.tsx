@@ -118,15 +118,15 @@ className="bg-gray-800 p-3 rounded-full hover:bg-[#FFB302] transition-colors"
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-[#FFB302] flex-shrink-0" />
-                <span className="text-gray-400">123 Galle Road, Colombo 03, Sri Lanka</span>
+                <span className="text-gray-400">Colombo, Sri Lanka</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#FFB302] flex-shrink-0" />
-                <span className="text-gray-400">+94 11 234 5678</span>
+                <span className="text-gray-400">+9477 762 7836</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#FFB302] flex-shrink-0" />
-                <span className="text-gray-400">info@handykruu.lk</span>
+                <span className="text-gray-400">hadykruu@gmail.com</span>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ className="bg-gray-800 p-3 rounded-full hover:bg-[#FFB302] transition-colors"
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              © 2024 Handykruu. All rights reserved.
+              © 2025 HandyKruu. All rights reserved.
             </div>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-[#FFB302] transition-colors">
