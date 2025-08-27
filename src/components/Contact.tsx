@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,17 +22,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      await emailjs.send(
+        "service_5xu0gqu",        // ✅ Your Service ID
+        "YOUR_TEMPLATE_ID",       // ⬅️ Replace with your EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        "YOUR_PUBLIC_KEY"         // ⬅️ Replace with your EmailJS Public Key
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 3000);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message, please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -92,7 +108,7 @@ const Contact = () => {
 
             {/* Google Map */}
             <div className="rounded-xl overflow-hidden">
-                <LoadScript googleMapsApiKey="AIzaSyBdGGg7JsolFuDIK_tKn_ibs01qx14Xr_M">
+              <LoadScript googleMapsApiKey="AIzaSyBdGGg7JsolFuDIK_tKn_ibs01qx14Xr_M">
                 <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={14}>
                   <Marker position={center} />
                 </GoogleMap>
