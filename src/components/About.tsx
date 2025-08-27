@@ -1,4 +1,5 @@
 import { CheckCircle, Award, Users, Clock } from 'lucide-react';
+import h3Video from '../assets/h3.mp4';
 
 const About = () => {
   const achievements = [
@@ -12,6 +13,7 @@ const About = () => {
     <section id="about" className="py-20 bg-[#121212] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
           <div>
             <h2 className="text-4xl font-bold mb-6">
               About <span className="text-[#FFB302]">Handykruu</span>
@@ -38,22 +40,26 @@ const About = () => {
               ))}
             </div>
 
-            <button className="text-[#FFB302] text-white px-8 py-3 rounded-lg text-[#FFB302] transition-colors font-semibold shadow-lg">
+            <button className="text-[#FFB302] px-8 py-3 rounded-lg transition-colors font-semibold shadow-lg border border-[#FFB302]">
               Learn More About Us
             </button>
           </div>
 
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
-                alt="Construction work in progress"
-                className="w-full h-[500px] object-cover"
-              />
-            </div>
-            
+          {/* Video Section */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={h3Video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
             {/* Floating Card */}
-<div className="absolute -bottom-6 -left-6 bg-[#1E1E1E] text-white rounded-xl shadow-lg p-6 border-l-4 text-[#FFB302]">
+            <div className="absolute -bottom-6 -left-6 bg-[#1E1E1E] text-white rounded-xl shadow-lg p-6 border-l-4 border-[#FFB302]">
               <div className="flex items-center space-x-4">
                 <div className="text-3xl font-bold text-[#FFB302]">500+</div>
                 <div>
@@ -63,6 +69,7 @@ const About = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

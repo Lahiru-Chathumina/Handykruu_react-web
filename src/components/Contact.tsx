@@ -95,7 +95,7 @@ const Contact = () => {
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, idx) => (
                 <div key={idx} className="flex items-start space-x-4">
-                  <div className="bg-orange-100 dark:bg-orange-700 p-3 rounded-lg">{info.icon}</div>
+                  <div className="bg-orange-100 dark:[#FFB302] p-3 rounded-lg">{info.icon}</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{info.title}</h4>
                     {info.details.map((d, i) => (
