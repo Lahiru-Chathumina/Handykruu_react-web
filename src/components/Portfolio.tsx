@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ExternalLink, Eye } from 'lucide-react';
 
 const Portfolio = () => {
