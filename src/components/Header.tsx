@@ -37,37 +37,37 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               Portfolio
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               Testimonials
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-white hover:text-orange-600 transition-colors font-medium"
+              className="text-white hover:bg-[#E6C200] transition-colors font-medium"
             >
               Contact
             </button>
@@ -95,43 +95,43 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 Portfolio
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 Testimonials
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-white hover:text-orange-600 transition-colors font-medium text-left"
+                className="text-white hover:text-[#FFB302] transition-colors font-medium text-left"
               >
                 Contact
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium w-fit"
+                className="bg-[#FFB302] text-white px-6 py-2 rounded-lg hover:bg-[#E6C200] transition-colors font-medium w-fit"
               >
                 Get Quote
               </button>
