@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle, Award, Users, Clock } from 'lucide-react';
 
 const About = () => {
