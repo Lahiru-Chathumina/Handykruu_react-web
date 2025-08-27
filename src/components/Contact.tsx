@@ -25,14 +25,14 @@ const Contact = () => {
     try {
       await emailjs.send(
         "service_5xu0gqu",        // ✅ Your Service ID
-        "YOUR_TEMPLATE_ID",       // ⬅️ Replace with your EmailJS Template ID
+        "template_k5aoh3e",       // ⬅️ Replace with your EmailJS Template ID
         {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"         // ⬅️ Replace with your EmailJS Public Key
+        "m_6GnAKmw4yFp-XEi"         // ⬅️ Replace with your EmailJS Public Key
       );
 
       setIsSubmitted(true);
