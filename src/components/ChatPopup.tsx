@@ -27,18 +27,18 @@ Our Services Include:
   },
   'Get a Quote': {
     text: "Great! I'd love to help you get a quote. Please provide project details or contact our team directly.",
-    options: ['Call Us: 0777 627 835', 'Email: info@handykruu.lk', 'Fill Contact Form'],
+    options: ['Call Us: 0777 627 835', 'Email: handykruu@gmail.com', 'Fill Contact Form'],
     timestamp: new Date(),
   },
   'Contact Info': {
-    text: `📍 Address: 123 Galle Road, Colombo 03
+    text: `📍 Address: Boralasgamuwa, Sri Lanka
 📞 Phone: 0777 627 835 / 0777 627 836
-📧 Email: info@handykruu.lk
+📧 Email: handykruu@gmail.com
 🕒 Hours: Mon-Fri 8AM-6PM, Sat 9AM-4PM`,
     timestamp: new Date(),
   },
   'Portfolio': {
-    text: "Check out our amazing portfolio! We've completed 500+ projects including luxury villas, office renovations, and commercial buildings.",
+    text: "Check out our amazing portfolio! We've completed 10+ projects including luxury villas, office renovations, and commercial buildings.",
     timestamp: new Date(),
   },
 };
