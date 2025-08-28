@@ -32,7 +32,6 @@ const ChatPopup: React.FC = () => {
   const handleSend = () => {
     if (!input.trim()) return;
 
-    // Add user message
     const userMessage: Message = {
       from: 'user',
       text: input,
@@ -42,7 +41,6 @@ const ChatPopup: React.FC = () => {
     setInput('');
     setIsTyping(true);
 
-    // Bot response after delay
     setTimeout(() => {
       setIsTyping(false);
       const msg = input.toLowerCase();
@@ -176,14 +174,14 @@ const ChatPopup: React.FC = () => {
       {open && (
         <div className="bg-white rounded-2xl shadow-2xl w-80 h-96 flex flex-col mb-4 border border-gray-200 animate-in slide-in-from-bottom-4 duration-300">
           {/* Header */}
-          <div className="bg-gradient-to-r from-orange-600 to-orange-700 text-white p-4 rounded-t-2xl flex items-center justify-between">
+          <div className="bg-gradient-to-r from-[#FFB302] to-[#FFB302] text-white p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-orange-600 font-bold text-sm">H</span>
+                <span className="text-[#FFB302] font-bold text-sm">H</span>
               </div>
               <div>
                 <h3 className="font-semibold">Handykruu Support</h3>
-                <p className="text-xs text-orange-100">Online now</p>
+                <p className="text-xs text-[#FFB302]/70">Online now</p>
               </div>
             </div>
             <button
@@ -201,7 +199,7 @@ const ChatPopup: React.FC = () => {
                 <div className={`max-w-[80%] ${msg.from === 'user' ? 'order-2' : 'order-1'}`}>
                   <div className={`flex items-start space-x-2 ${msg.from === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      msg.from === 'user' ? 'bg-orange-600' : 'bg-gray-600'
+                      msg.from === 'user' ? 'bg-[#FFB302]' : 'bg-gray-600'
                     }`}>
                       {msg.from === 'user' ? (
                         <User size={12} className="text-white" />
@@ -212,7 +210,7 @@ const ChatPopup: React.FC = () => {
                     <div>
                       <div className={`rounded-2xl px-4 py-2 ${
                         msg.from === 'user'
-                          ? 'bg-orange-600 text-white rounded-br-md'
+                          ? 'bg-[#FFB302] text-white rounded-br-md'
                           : 'bg-white text-gray-800 rounded-bl-md shadow-sm border'
                       }`}>
                         <p className="text-sm whitespace-pre-line">{msg.text}</p>
@@ -230,7 +228,7 @@ const ChatPopup: React.FC = () => {
                         <button
                           key={i}
                           onClick={() => handleOptionClick(opt)}
-                          className="block w-full text-left px-3 py-2 text-sm bg-white border border-orange-200 rounded-lg hover:bg-orange-50 hover:border-orange-300 transition-colors text-gray-700"
+                          className="block w-full text-left px-3 py-2 text-sm bg-white border border-[#FFB302]/40 rounded-lg hover:bg-[#FFB302]/10 hover:border-[#FFB302]/60 transition-colors text-gray-700"
                         >
                           {opt}
                         </button>
@@ -270,12 +268,12 @@ const ChatPopup: React.FC = () => {
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && handleSend()}
                 placeholder="Type your message..."
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-sm"
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB302] focus:border-[#FFB302] outline-none text-sm"
               />
               <button
                 onClick={handleSend}
                 disabled={!input.trim()}
-                className="bg-orange-600 text-white p-2 rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#FFB302] text-white p-2 rounded-lg hover:bg-[#e6a800] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={16} />
               </button>
@@ -288,7 +286,7 @@ const ChatPopup: React.FC = () => {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="bg-orange-600 hover:bg-orange-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 group animate-in slide-in-from-bottom-4"
+          className="bg-[#FFB302] hover:bg-[#e6a800] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 group animate-in slide-in-from-bottom-4"
         >
           <MessageCircle size={24} />
           <span className="font-medium">Chat with us</span>
