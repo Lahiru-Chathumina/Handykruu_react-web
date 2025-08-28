@@ -6,7 +6,8 @@ import Portfolio from './components/Portfolio.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
-import './index.css' 
+import ChatPopup from './components/ChatPopup';
+import './index.css'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <ChatPopup />
     </div>
   );
 }
