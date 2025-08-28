@@ -1,6 +1,4 @@
 import { ArrowRight, Play  } from 'lucide-react';
-import h1Video from '../assets/h1.mp4';
-
 
 
 const Hero = () => {
@@ -13,39 +11,15 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center">
-      {/* Background Video */}
-    
-     <div className="absolute inset-0 z-0">
-  {/* Background video autoplay, muted initially */}
-  <video
-    autoPlay
-    loop
-    muted          // mobile autoplay සඳහා muted initially
-    playsInline
-    className="w-full h-full object-cover"
-    id="heroVideo"
-  >
-    <source src={h1Video} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  {/* Gradient overlay for text readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
-</div>
-
-{/* Example button to enable sound */}
- 
-
-      {/* Background Image */}
-      {/* <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-r from-black/60 to-black/40">
           <img
-            src="https://www.facebook.com/reel/1203957044736297/"
+            src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
             alt="Construction site"
             className="w-full h-full object-cover mix-blend-overlay"
           />
         </div>
-      </div> */}
+      </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
