@@ -20,9 +20,11 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              For over 15 years, Handykruu has been Sri Lanka's trusted partner in bringing construction 
-              dreams to life. We pride ourselves on delivering exceptional quality, innovative solutions, 
-              and unmatched customer service across all our projects.
+              At Handykruu, we take pride in being Sri Lanka’s trusted partner in turning construction dreams into reality.
+With a passion for quality, innovation, and reliability, we deliver projects that reflect excellence from start to finish.
+
+Every design, every detail, and every service we offer is guided by our promise of superior craftsmanship and unmatched customer care. Handykruu isn’t just about building structures 
+— it’s about building your future, together.
             </p>
 
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
