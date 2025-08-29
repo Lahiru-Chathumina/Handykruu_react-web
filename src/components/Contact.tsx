@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Clock, Send } from 'lucide-react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import emailjs from 'emailjs-com';
 
@@ -61,11 +61,7 @@ const Contact = () => {
       title: 'Call Us',
       details: ['+94 777 627 835', '+94 777 627 836']
     },
-    {
-      icon: <Mail className="w-6 h-6 text-[#FFB302]" />,
-      title: 'Email Us',
-      details: ['handykruu@gmail.com']
-    },
+   
     {
       icon: <Clock className="w-6 h-6 text-[#FFB302]" />,
       title: 'Working Hours',
