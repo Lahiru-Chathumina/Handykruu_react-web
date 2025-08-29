@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Clock, Send } from 'lucide-react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet'; 
 import emailjs from 'emailjs-com';
+
+// Fix default marker icons for React-Leaflet
+
+const DefaultIcon = L.icon({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+L.Marker.prototype.options.icon = DefaultIcon;
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,15 +40,15 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_5xu0gqu",        // ✅ Your Service ID
-        "template_k5aoh3e",       // ⬅️ Replace with your EmailJS Template ID
+        "service_5xu0gqu",
+        "template_k5aoh3e",
         {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
-        "m_6GnAKmw4yFp-XEi"         // ⬅️ Replace with your EmailJS Public Key
+        "m_6GnAKmw4yFp-XEi"
       );
 
       setIsSubmitted(true);
@@ -61,7 +77,6 @@ const Contact = () => {
       title: 'Call Us',
       details: ['+94 777 627 835', '+94 777 627 836']
     },
-   
     {
       icon: <Clock className="w-6 h-6 text-[#FFB302]" />,
       title: 'Working Hours',
@@ -69,8 +84,7 @@ const Contact = () => {
     }
   ];
 
-  const mapContainerStyle = { width: '100%', height: '300px' };
-  const center = { lat: 6.8382, lng: 79.9104 }; // Boralesgamuwa coordinates
+const center: L.LatLngTuple = [6.8382, 79.9104];
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
@@ -101,14 +115,9 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Google Map */}
-            <div className="rounded-xl overflow-hidden">
-              <LoadScript googleMapsApiKey="AIzaSyBdGGg7JsolFuDIK_tKn_ibs01qx14Xr_M">
-                <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={14}>
-                  <Marker position={center} />
-                </GoogleMap>
-              </LoadScript>
-            </div>
+            {/* OpenStreetMap */}
+    <div className="rounded-xl overflow-hidden"> <MapContainer center={center} zoom={14} style={{ width: '100%', height: '300px' }} scrollWheelZoom={true}> <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' /> <Marker 
+    position={center}> <Popup>Our Office Location</Popup> </Marker> </MapContainer> </div>
           </div>
 
           {/* Contact Form */}
