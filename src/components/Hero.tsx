@@ -52,11 +52,11 @@ className="bg-[#FFB302] text-black px-8 py-4 rounded-lg hover:bg-[#E6C200] trans
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#FFB302] mb-2">500+</div>
+              <div className="text-3xl font-bold text-[#FFB302] mb-2">10+</div>
               <div className="text-gray-300 text-sm">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#FFB302] mb-2">15+</div>
+              <div className="text-3xl font-bold text-[#FFB302] mb-2">5+</div>
               <div className="text-gray-300 text-sm">Years Experience</div>
             </div>
             <div className="text-center">
