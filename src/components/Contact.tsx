@@ -59,12 +59,12 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6 text-[#FFB302]" />,
       title: 'Call Us',
-      details: ['+94 11 234 5678', '+94 77 123 4567']
+      details: ['+94 777 627 835', '+94 777 627 836']
     },
     {
       icon: <Mail className="w-6 h-6 text-[#FFB302]" />,
       title: 'Email Us',
-      details: ['info@handykruu.lk', 'projects@handykruu.lk']
+      details: ['handykruu@gmail.com']
     },
     {
       icon: <Clock className="w-6 h-6 text-[#FFB302]" />,
@@ -89,7 +89,6 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Contact Information</h3>
             <div className="space-y-6 mb-8">
